@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #333;
+            color: white;
+            padding: 15px;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+        .content, .image {
+            padding: 20px;
+            background: #f4f4f4;
+        }
+        .image img {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            display: flex;
+            justify-content: space-between;
+            background: #333;
+            color: white;
+            padding: 10px;
+        }
+        @media (max-width: 600px) {
+            header, footer {
+                flex-direction: column;
+                text-align: center;
+            }
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 1024px) and (min-width: 601px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Logo</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="content">
+            <h2>Welcome</h2>
+            <p>This is a responsive webpage using Flexbox, Grid, and Media Queries.</p>
+        </div>
+        <div class="image">
+            <img src="https://via.placeholder.com/400" alt="Sample Image">
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Ogallo Odero</p>
+        <div>
+            <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>
